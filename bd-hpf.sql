@@ -1,6 +1,6 @@
 CREATE TABLE professor (
     id_professor SERIAL PRIMARY KEY,
-    data VARCHAR(255) NOT NULL,
+    nome VARCHAR(255) NOT NULL,
     cpf VARCHAR(14) NOT NULL,
     data_nascimento DATE,
     email VARCHAR(255),
@@ -89,7 +89,7 @@ CREATE TABLE turma (
     quantidade_aluno INT,
     chamada INT,
     ano_letivo INT NOT NULL,
-    id_escola BIGINT NOT NULL
+    id_escola BIGINT NOT NULL,
     FOREIGN KEY (id_escola) REFERENCES escola(id_escola)
 );
 
